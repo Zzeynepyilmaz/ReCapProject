@@ -37,7 +37,10 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll());
         }
 
-        
+        public IDataResult<Car> GetById(int id)
+        {
+            return new SuccessDataResult<Car>(_carDal.Get(c => c.CarId == id));
+        }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
@@ -46,7 +49,8 @@ namespace Business.Concrete
 
         public IResult Update(Car car)
         {
-            throw new NotImplementedException();
+            _carDal.Update(car);
+            return new SuccessResult(Messages.CarUpdated);
         }
 
         IDataResult<List<CarDetailDto>> ICarService.GetCarByBrandId(int id)
