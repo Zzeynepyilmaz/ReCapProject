@@ -12,11 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, CarRentContext>, ICarDal
     {
-        public List<Car> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
+       
         public List<CarDetailDto> GetCarDetails()
         {
             using (CarRentContext context = new CarRentContext())
