@@ -30,10 +30,8 @@ namespace Business.Constants
         public static string RentalUpdated = "Araç kiralama güncelleme işlemi başarılı";
         public static string RentalDeleted = "Araç kiralama silme işlemi başarılı";
 
-
-
-
-
-
+        public static string CarImageLimitExceeded { get; internal set; }
+        public static string CarImageDeleted { get; internal set; }
+        public static string CarImageUpdated { get; internal set; }
     }
 }

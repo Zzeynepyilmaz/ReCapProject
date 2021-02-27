@@ -45,3 +45,38 @@ CREATE TABLE Rentals(
 	FOREIGN KEY (CarId) REFERENCES Cars(Id),
 	FOREIGN KEY (CustomerId) REFERENCES Customers(Id)
 )
+
+CREATE TABLE CarImages(
+    Id int PRIMARY KEY IDENTITY(1,1),
+	CarId int,
+	ImagePath nvarchar(50),
+	Date datetime,
+	FOREIGN KEY (CarId) REFERENCES Cars(Id),
+
+)
+
+
+INSERT INTO Car(BrandId,ColorId,ModelYear,DailyPrice,Descriptions)
+VALUES
+	('1','1','2016','180','Araç km sınırı 750 kmdir'),
+	('2','2','2010','150','Araç km sınırı 900 kmdir'),
+	('3','3','2010','145','Araç km sınırı 800 kmdir'),
+	('4','4','2018','200','Araç km sınırı 600 kmdir');
+
+
+INSERT INTO Color
+VALUES
+	('Siyah'),
+	('Beyaz'),
+	('Gri'),
+	('Mavi'),
+	('Kırmızı');
+
+
+INSERT INTO Brand
+VALUES
+	('Fiat'),
+	('Hundai'),
+	('Renault'),
+	('Mercedes');
+
