@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -31,7 +32,8 @@ namespace Business.Constants
         public static string RentalDeleted = "Araç kiralama silme işlemi başarılı";
 
         public static string CarImageLimitExceeded { get; internal set; }
-        public static string CarImageDeleted { get; internal set; }
-        public static string CarImageUpdated { get; internal set; }
+        public static string CarImageDeleted = "Araç resmi silindi";
+        public static string CarImageUpdated = "Araç resmi güncellendi";
+        public static string AuthorizationDenied = "Yetkiniz yok";
     }
 }
